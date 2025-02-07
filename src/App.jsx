@@ -4,10 +4,9 @@ import { useState } from "react";
 
 const App = () => {
   const [gameStarted, setGameStarted] = useState(false);
-  const [playerName, setPlayerName] = useState("");
 
-  const startGame = (name) => {
-    setPlayerName(name);
+  const startGame = () => {
+    
     setGameStarted(true);
   }
    return (
@@ -15,7 +14,7 @@ const App = () => {
     {!gameStarted ? (
       <WelcomePage startGame={startGame} />
     ): (
-      <GamePlay playerName={playerName} />
+      <GamePlay/>
  
     )}
   </div>

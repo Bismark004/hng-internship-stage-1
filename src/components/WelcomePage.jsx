@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./WelcomePage.css";
 
-const WelcomePage = ({ startGame }) => {
+const WelcomePage = (props) => {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -32,7 +32,7 @@ const WelcomePage = ({ startGame }) => {
             <li>If you run out of attempts, the game will reveal the correct color.</li>
             <li>Click <strong>“Play Again”</strong> to start a new round.</li>
           </ul>
-          <button className="start-btn" onClick={() => startGame(name)}>
+          <button className="start-btn" onClick={props.startGame}>
             Start Game
           </button>
         </div>

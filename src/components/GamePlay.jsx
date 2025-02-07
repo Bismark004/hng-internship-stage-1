@@ -46,16 +46,18 @@ const GamePlay = () => {
       <h1>Color Guessing Game</h1>
       <div
         className="color-card"
+        data-testid="colorBox"
         style={{ backgroundColor: revealed ? hiddenColor.hex : "#13121C" }}
       >
         {revealed ? "" : "???"}
       </div>
 
-      <div className="feedback">{feedback || "Make a guess!"}</div>
+      <div data-testid="gameInstructions" className="feedback">{feedback || "Make a guess!"}</div>
 
       <div className="color-buttons">
         {colors.map((color, index) => (
           <button
+            data-testid="colorOption"
             key={index}
             style={{ backgroundColor: color.hex }}
             onClick={() => handleGuess(color)}
@@ -64,10 +66,10 @@ const GamePlay = () => {
         ))}
       </div>
 
-      <p>Attempts Left: {attemptsLeft}</p>
+      <p data-testid="score">Attempts Left: {attemptsLeft}</p>
 
       {(feedback.includes("Correct!") || feedback.includes("Game Over!")) && (
-        <button className="reset-btn" onClick={resetGame}>
+        <button className="reset-btn" onClick={resetGame} data-testid="newGameButton">
           Play Again
         </button>
       )}
