@@ -1,0 +1,115 @@
+body {
+  background-color: #13121C;
+  color: #C0A1AC;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background: #62254E;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  color: #C0A1AC;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.color-card {
+  width: 150px;
+  height: 150px;
+  background-color: #13121C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid #4F9FB8;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.feedback {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #C0A1AC;
+}
+
+.color-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.color-buttons button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.3s;
+}
+
+.color-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.color-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #C0A1AC;
+  margin-top: 10px;
+}
+
+.reset-btn {
+  background: #5B69D4;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+  background: #4F9FB8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .color-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .color-card {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
